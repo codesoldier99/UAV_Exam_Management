@@ -18,9 +18,10 @@ module.exports = {
       name: 'uav-admin',
       cwd: './admin-frontend',
       script: 'npm',
-      args: 'run dev -- --host 0.0.0.0 --port 3000',
+      args: 'run dev',
       env: {
-        VITE_API_BASE_URL: 'http://localhost:8000/api/v1'
+        VITE_API_BASE_URL: 'http://localhost:8000/api/v1',
+        DANGEROUSLY_DISABLE_HOST_CHECK: 'true'
       }
     }
   ]
