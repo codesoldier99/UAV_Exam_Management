@@ -1,6 +1,7 @@
 from .user import User, Role, Permission
 from .institution import Institution
-from .exam import ExamProduct, Venue, VenueType
+from .exam import ExamProduct, VenueType
+from .venue import Venue
 from .candidate import Candidate, CandidateStatus
 from .schedule import Schedule, ScheduleStatus, ActivityType
 

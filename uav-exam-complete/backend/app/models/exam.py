@@ -25,19 +25,3 @@ class ExamProduct(Base):
     # Relationships
     candidates = relationship("Candidate", back_populates="exam_product")
 
-class Venue(Base):
-    __tablename__ = "venues"
-    
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String(100), unique=True, nullable=False)
-    code = Column(String(50), unique=True, nullable=False)
-    type = Column(Enum(VenueType), nullable=False)
-    capacity = Column(Integer, default=1)  # 容纳人数
-    description = Column(Text)
-    location = Column(String(255))
-    is_active = Column(Boolean, default=True)
-    created_at = Column(DateTime(timezone=True), server_default=func.now())
-    updated_at = Column(DateTime(timezone=True), onupdate=func.now())
-    
-    # Relationships
-    schedules = relationship("Schedule", back_populates="venue")
